@@ -89,26 +89,25 @@
             h3.mb-0 Análisis y diseño               
 
 
-    .row.bg16.align-items-center.mb-5(data-aos="fade-left")
+    .row.bg.align-items-center.mb-5(data-aos="fade-left")
       .col-lg-12.col-12.px-lg-5.px-4 
         .row.justify-content-center.align-items-center          
           .col-lg-12                          
             .row.justify-content-center.mb-5  
-              .col-lg-4.my-3
-                .bg9.brad.h-100.p-4(data-aos="fade-down")
-                  p(data-aos="fade-down") Una buena forma de empezar el análisis es con el formato de la factura; se inicia revisando la cabecera de la factura. 
+              .col-lg-8.my-3
+                p(data-aos="fade-down") Una buena forma de empezar el análisis es con el formato de la factura; se inicia revisando la cabecera de la factura. 
 
-                  p(data-aos="fade-down").mb-0 Un primer impulso puede hacer pensar que se debe crear una entidad para la compañía o empresa y pensar en definir una entidad o empresa con atributos “nombre_compañia”, “direccion”, “ciudad”, etc.; sin embargo, considere lo siguiente:
+                h5.t1(data-aos="fade-down").mb-4 Un primer impulso puede hacer pensar que se debe crear una entidad para la compañía o empresa y pensar en definir una entidad o empresa con atributos “nombre_compañia”, “direccion”, “ciudad”, etc.; sin embargo, considere lo siguiente:
+                .bg9.p-4.brad(data-aos="fade-left")
+                  p(data-aos="fade-down").mb-0 El cliente le ha pedido que modele un sistema de facturación para su droguería, es decir, para una droguería, no para un conjunto de droguerías.  Es diferente si solicitaran “se necesita un sistema de facturación que administre el inventario y facturación de múltiples droguerías”, a estos problemas se les llama multitenant (multiinquilino), pero este no es el caso. Por lo tanto, no es la entidad droguería parte del modelo, porque no se está modelando la facturación de múltiples droguerías.                    
               .col-lg-4.my-3
                 img.img-t.img-a(data-aos="zoom-in")(src='@/assets/curso/temas/24.png', alt='')                             
-              .col-lg-4.my-3
-                .bg8.p-4.brad.h-100(data-aos="fade-left")
-                  p(data-aos="fade-down").mb-0 El cliente le ha pedido que modele un sistema de facturación para su droguería, es decir, para una droguería, no para un conjunto de droguerías.  Es diferente si solicitaran “se necesita un sistema de facturación que administre el inventario y facturación de múltiples droguerías”, a estos problemas se les llama multitenant (multiinquilino), pero este no es el caso. Por lo tanto, no es la entidad droguería parte del modelo, porque no se está modelando la facturación de múltiples droguerías.   
+ 
 
-            .titulo-sexto.color-acento-contenido.text-white
+            .titulo-sexto.color-acento-contenido
               h5 Figura 2.
               span Factura con información resaltada
-            .bg6.brad.p-4.mb-5
+            .bgfig.p-5.brad.mb-5
               img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/25.png', alt='Imagen que resalta en la factura, la información que se presenta del cliente.')    
 
     p(data-aos="fade-down") Tal parece que los datos más relevantes de los clientes están presentados en la parte resaltada de la imagen, lo que hace pensar que se requiere una entidad, cliente, usuario o persona y, que la persona puede tener relacionada una empresa o tal vez una persona hace la compra para una empresa.
@@ -291,7 +290,20 @@
                     .t5.pe-5
                       p Después se debe pegar (Ctrl+V) el contenido en un editor de texto y el resultado será: 
                   .col-lg-5.my-3.mb-4.mb-md-0
-                    img.img-a.img-t(src='@/assets/curso/temas/49.png', alt="")                   
+                    .bg20.brad.p-4
+                      p #[b CREATE TABLE IF NOT EXISTS] `mydb`.`persona` (
+                      p.ps-3 `id_persona` #[b INT NOT NULL,]
+                      p.ps-3 `identificacion` #[b VARCHAR(45) NOT NULL,]
+                      p.ps-3 `nombres` #[b VARCHAR(450) NOT NULL,]
+                      p.ps-3 `direccion` #[b VARCHAR(250) NULL,]
+                      p.ps-3 `ciudad` #[b VARCHAR(80) NULL,]
+                      p.ps-3 `codigo_postal` #[b VARCHAR(15) NULL,]
+                      p.ps-3 `telefono` #[b VARCHAR(15) NULL,]
+                      p.ps-3 `correo` #[b VARCHAR(250) NULL,]
+                      p.ps-3 #[b PRIMARY KEY] (`id_persona`),
+                      p.ps-3 #[b UNIQUE INDEX] `identificacion_#[b UNIQUE]` (`identificacion` #[b ASC]) #[b VISIBLE])
+                      p.mb-0 ENGINE = InnoDB;
+
          
             p(data-aos="fade-down") Como puede apreciar, es posible obtener la definición de la base de datos en lenguaje SQL (DDL), si no se tuviera MySQL Workbench, se tendría que elaborar cada una de las sentencias.
 

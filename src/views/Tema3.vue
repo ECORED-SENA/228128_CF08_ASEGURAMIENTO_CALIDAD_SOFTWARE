@@ -119,41 +119,52 @@
       span Pasos 
     .bgfig.p-5.brad.mb-5(data-aos="zoom-in") 
       img.img-a.img-t.mb-5(data-aos="zoom-in")(src='@/assets/curso/temas/18.png', alt='Imagen que presenta los pasos luego de conectar a la base de datos con MySQL Workbench.') 
+    .row.justify-content-center.align-items-top          
+      .col-lg.my-1.col-md-12
+        .bg17.p-3.brad.h-100       
+          ol.lista-ol--cuadro.fa-ul.mb-0
+            li.mb-0 
+              .lista-ol--cuadro__vineta.color2
+                span.text-bold 1. 
+              span.text-white Ingrese a la pestaña de administración. 
+      .col-lg.my-1.col-md-12
+        .bg17.p-3.brad.h-100       
+          ol.lista-ol--cuadro.fa-ul.mb-0
+            li.mb-0 
+              .lista-ol--cuadro__vineta.color2
+                span.text-bold 2. 
+              span.text-white Seleccione Data #[i Import/Restore]. 
+      .col-lg.my-1.col-md-12
+        .bg17.p-3.brad.h-100       
+          ol.lista-ol--cuadro.fa-ul.mb-0
+            li.mb-0 
+              .lista-ol--cuadro__vineta.color2
+                span.text-bold 3. 
+              span.text-white Marque la opción #[i Import from Self-Contained File].    
+    .row.justify-content-center.align-items-top          
+      .col-lg.my-1.col-md-12
+        .bg17.p-3.brad.h-100       
+          ol.lista-ol--cuadro.fa-ul.mb-0
+            li.mb-0 
+              .lista-ol--cuadro__vineta.color2
+                span.text-bold 4. 
+              span.text-white Busque el archivo generado antes.
+      .col-lg.my-1.col-md-12
+        .bg17.p-3.brad.h-100       
+          ol.lista-ol--cuadro.fa-ul.mb-0
+            li.mb-0 
+              .lista-ol--cuadro__vineta.color2
+                span.text-bold 5. 
+              span.text-white Seleccione la base de datos a restaurar.
+      .col-lg.my-1.col-md-12
+        .bg17.p-3.brad.h-100       
+          ol.lista-ol--cuadro.fa-ul.mb-0
+            li.mb-0 
+              .lista-ol--cuadro__vineta.color2
+                span.text-bold 6. 
+              span.text-white Haga clic en el botón Star Import. 
 
-      .row.justify-content-center.align-items-top          
-        .col-lg.my-1.col-md-12       
-          ol.lista-ol.fa-ul
-            li 
-              span.text-bold 1. 
-              | Ingrese a la pestaña de administración. 
-        .col-lg.my-1.col-md-12       
-          ol.lista-ol.fa-ul
-            li 
-              span.text-bold 2. 
-              | Seleccione Data Import/Restore. 
-        .col-lg.my-1.col-md-12       
-          ol.lista-ol.fa-ul
-            li 
-              span.text-bold 3. 
-              | Marque la opción Import from Self-Contained File.    
-      .row.justify-content-center.align-items-top          
-        .col-lg.my-1.col-md-12       
-          ol.lista-ol.fa-ul
-            li 
-              span.text-bold 4. 
-              | Busque el archivo generado antes.
-        .col-lg.my-1.col-md-12       
-          ol.lista-ol.fa-ul
-            li 
-              span.text-bold 5. 
-              | Seleccione la base de datos a restaurar.
-        .col-lg.my-1.col-md-12       
-          ol.lista-ol.fa-ul
-            li 
-              span.text-bold 6. 
-              | Haga clic en el botón Star Import. 
-
-    p(data-aos="fade-down") Hasta este punto, puede tener la seguridad que está en capacidad de respaldar y restablecer la base de datos por lo menos en un entorno de desarrollo y producción para bases pequeñas. Este proceso le puede servir para bases de datos grandes en las que debe usar la interfaz de comando “línea” con el comando “source”.  Esto debido a que si la copia de seguridad es del tamaño de gigas, MySQL Workbench no podrá abrirlo y puede bloquearse, mientras que por la interfaz de línea de comando, el tamaño de la copia puede ser tan grande como se desee.                                          
+    p.mt-5(data-aos="fade-down") Hasta este punto, puede tener la seguridad que está en capacidad de respaldar y restablecer la base de datos por lo menos en un entorno de desarrollo y producción para bases pequeñas. Este proceso le puede servir para bases de datos grandes en las que debe usar la interfaz de comando “línea” con el comando “source”.  Esto debido a que si la copia de seguridad es del tamaño de gigas, MySQL Workbench no podrá abrirlo y puede bloquearse, mientras que por la interfaz de línea de comando, el tamaño de la copia puede ser tan grande como se desee.                                          
 </template>
 
 <script>
