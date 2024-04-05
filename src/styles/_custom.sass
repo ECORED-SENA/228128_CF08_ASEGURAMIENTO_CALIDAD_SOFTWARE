@@ -387,7 +387,9 @@
   background-repeat: no-repeat
   background-size: cover
   background-position: center right
-  box-shadow: 0 5px 32px 0 #004cff36    
+  box-shadow: 0 5px 32px 0 #004cff36  
+  @media screen and (max-width: 992px)
+    background-position: center
 
 .t5
   *
@@ -440,8 +442,15 @@
   border-radius: 5px       
 
 .bg20
-  background-color: #EEECE1  
-  box-shadow: 0 5px 32px 0 #00000052 
+  background-color: #000000
+  *
+    color: white 
+  border-radius: 0 0 10px 10px  
+
+
+.bg20_1
+  background-color: #273A89
+  border-radius: 10px 10px 0 0  
 
 .bgh
   background-color:#273A89 !important
@@ -488,9 +497,9 @@
     margin-top: 2rem    
 
 .bg25
-  background: url('../assets/curso/temas/82.png')
+  background: url('../assets/curso/temas/88.png')
   background-position: center bottom
-  background-size: 100% 80%
+  background-size: 100% 100%
   background-repeat: no-repeat
   margin-inline: -3.4rem
   @media screen and (max-width: 992px)

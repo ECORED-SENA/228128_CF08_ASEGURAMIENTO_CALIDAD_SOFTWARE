@@ -2,7 +2,7 @@ export default {
   global: {
     componenteFormativo: 'Modelo entidad relación',
     descripcionCurso:
-      'Una vez conocidos los principios del diseño de bases de datos relacionales ,se hace importante fortalecer las habilidades de análisis, debido a que diseñar un modelo de datos no solamente es una tarea que intenta cumplir un conjunto de requisitos funcionales de un sistema informático, sino también el requerimiento de rendimiento, escalabilidad y flexibilidad.',
+      'Una vez conocidos los principios del diseño de bases de datos relacionales, se hace importante fortalecer las habilidades de análisis, debido a que diseñar un modelo de datos no solamente es una tarea que intenta cumplir un conjunto de requisitos funcionales de un sistema informático, sino también el requerimiento de rendimiento, escalabilidad y flexibilidad.',
     imagenBannerPrincipal: require('@/assets/curso/portada/banner-princiapal.png'),
     fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
     imagenesDecorativasBanner: [
@@ -204,7 +204,7 @@ export default {
     {
       termino: '<em>Multitenant</em>',
       significado:
-        'tenencia múltiple o multiinquilino hace referencia a aplicaciones que se diseñan para soportar el mismo sistema para distintos usuarios o empresas, a pesar de estar en la misma base de datos y usar el mismo código fuente el sistema sabe distinguir entre los datos de un usuario o empresa de los otros, sin confundirlos.',
+        'tenencia múltiple o multiinquilino, hace referencia a aplicaciones que se diseñan para soportar el mismo sistema para distintos usuarios o empresas, a pesar de estar en la misma base de datos y usar el mismo código fuente el sistema sabe distinguir entre los datos de un usuario o empresa de los otros, sin confundirlos.',
     },
   ],
   referencias: [

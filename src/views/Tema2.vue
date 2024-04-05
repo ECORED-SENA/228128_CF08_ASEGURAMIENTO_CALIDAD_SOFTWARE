@@ -68,7 +68,7 @@
                               | Productos sin existencia.    
                  
               .col-lg-4.my-3
-                img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/21.png', alt='')  
+                img.img-a.img-t.mov(data-aos="zoom-in")(src='@/assets/curso/temas/21.png', alt='')  
 
             p.text-white(data-aos="fade-down") También fijó los productos que se organizan por categoría, porque le interesa saber el precio de compra y de venta, para conocer qué descuento hacer a una factura.
 
@@ -101,7 +101,7 @@
                 .bg9.p-4.brad(data-aos="fade-left")
                   p(data-aos="fade-down").mb-0 El cliente le ha pedido que modele un sistema de facturación para su droguería, es decir, para una droguería, no para un conjunto de droguerías.  Es diferente si solicitaran “se necesita un sistema de facturación que administre el inventario y facturación de múltiples droguerías”, a estos problemas se les llama multitenant (multiinquilino), pero este no es el caso. Por lo tanto, no es la entidad droguería parte del modelo, porque no se está modelando la facturación de múltiples droguerías.                    
               .col-lg-4.my-3
-                img.img-t.img-a(data-aos="zoom-in")(src='@/assets/curso/temas/24.png', alt='')                             
+                img.img-t.img-a.mov(data-aos="zoom-in")(src='@/assets/curso/temas/24.png', alt='')                             
  
 
             .titulo-sexto.color-acento-contenido
@@ -240,15 +240,10 @@
       .col-lg-5.my-3
         img.img-a.img-t(src='@/assets/curso/temas/41.png', alt='') 
 
-    .titulo-sexto.color-acento-contenido
-      h5 Figura 10.
-      span Filas
-    .bgfig.p-5.brad.mb-5(data-aos="zoom-in") 
-      img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/42.png', alt='Imagen que muestra cada fila y su representación.') 
     p(data-aos="fade-down").mb-5 La entidad factura_producto es una relación de muchos a muchos y agrega los datos necesarios para saber en cuánto y cuántos productos se venden por factura. También en la siguiente imagen se muestra cómo son obligatorias todas las columnas de este modelo y que la cantidad por defecto tiene valor de 1, debido a que si se intenta guardar un valor nulo, no debe ser posible y en lugar de insertar nulo insertará 1, porque no tiene sentido agregar un producto a una factura y no vender al menos un producto.                  
 
     .titulo-sexto.color-acento-contenido
-      h5 Figura 11.
+      h5 Figura 10.
       span Columnas del modelo
     .bgfig.p-5.brad.mb-5(data-aos="zoom-in") 
       img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/43.png', alt='Imagen que presenta las columnas del modelo explicado.') 
@@ -290,6 +285,8 @@
                     .t5.pe-5
                       p Después se debe pegar (Ctrl+V) el contenido en un editor de texto y el resultado será: 
                   .col-lg-5.my-3.mb-4.mb-md-0
+                    .bg20_1.p-4
+                      img.img-t(src='@/assets/curso/temas/89.png', alt='')                    
                     .bg20.brad.p-4
                       p #[b CREATE TABLE IF NOT EXISTS] `mydb`.`persona` (
                       p.ps-3 `id_persona` #[b INT NOT NULL,]
@@ -341,6 +338,9 @@
               .row.justify-content-center.align-items-end          
                 .col-lg-6.my-3
                   .p-4 
+                    .bg20_1.p-4
+                      img.img-t(src='@/assets/curso/temas/89.png', alt='')       
+
                     .bg20.brad.p-4
                       p.ps-3 #[b CREATE TABLE IF NOT EXISTS] `mydb`.`factura` ( 
                       p.ps-1 `id_factura` #[b BIGINT NOT NULL AUTO_INCREMENT],
@@ -371,12 +371,14 @@
                       p ENGINE = InnoDB   
 
                 .col-lg-6
-                  img.img-a.img-t(src='@/assets/curso/temas/52.png', alt='')  
+                  img.img-a.img-t.mov(src='@/assets/curso/temas/52.png', alt='')  
 
             h5(data-aos="fade-down").my-5 Observe cómo las llaves foráneas les define un índice:                        
             .row.justify-content-center.mb-5     
               .col-lg-8
-                .bgtg.text-center.brad.p-3.mb-4(data-aos="fade-down")
+                .bg20_1.p-4
+                  img.img-t(src='@/assets/curso/temas/89.png', alt='')                    
+                .bg20.brad.p-4.mb-4
                   p.mb-0 #[b INDEX] `fk_factura_persona_idx` (`id_persona` #[b ASC]) #[b VISIBLE],             
                 p(data-aos="fade-down") Con esta sintaxis, lo que hace MySQL #[i Workbench] es decirle al gestor de base de datos MySQL que esta columna id_persona debe guardarse en estructura de árbol binario (que se llame fk_factura_persona_idx) y no de manera secuencial.  Este tipo de estructura de datos en árbol mejora la velocidad de las operaciones de consulta y búsqueda.
 
@@ -391,15 +393,14 @@
             p(data-aos="fade-down").mb-5 También MySQL WorKbench crea unas restricciones que permiten mantener la integridad de los datos.                       
             .row.justify-content-center.mb-5     
               .col-lg-8
-                .bgtg.brad.px-4.mb-4
-                  .row.justify-content-center.align-items-end         
-                    .col-lg-8.my-3
-                      p #[b CONSTRAINT] `fk_factura_persona`
-                      p.ps-3 #[b FOREIGN KEY] (`id_persona`)
-                      p.ps-3 #[b REFERENCES] `mydb`.`persona` (`id_persona`)
-                      p.mb-0.ps-3 #[b ON DELETE NO ACTION] ACTION,]
-                    .col-lg-4
-                      img.img-a.img-t(src='@/assets/curso/temas/53.png', alt='')       
+                .bg20_1.p-4
+                  img.img-t(src='@/assets/curso/temas/89.png', alt='')                    
+                .bg20.brad.p-4
+                  p #[b CONSTRAINT] `fk_factura_persona`
+                  p.ps-3 #[b FOREIGN KEY] (`id_persona`)
+                  p.ps-3 #[b REFERENCES] `mydb`.`persona` (`id_persona`)
+                  p.mb-0.ps-3 #[b ON DELETE NO ACTION] ACTION,]
+      
 
             h5(data-aos="fade-down").mb-5 A continuación, se presenta línea a línea, recordando que la columna id_persona es una llave foránea de la tabla persona:
 
@@ -436,7 +437,7 @@
     #t_2_3.titulo-segundo.color-acento-contenido(data-aos="zoom-in-left")
       h2 2.3 Generar la base de datos
 
-    p(data-aos="fade-down") A continuación, se presentará cómo obtener el modelo físico de una base de datos en formato natural de las bases de datos (esto es SQL). Con el siguiente procedimiento se obtendrá un modelo de datos en sentencias DDL, en un uno archivo con extensión .sql., estos documentos son los códigos fuente de las bases de datos, generalmente en el proceso de desarrollo de software son versionados como cualquier archivo de código fuente.
+    p(data-aos="fade-down") A continuación, se presentará cómo obtener el modelo físico de una base de datos en formato natural de las bases de datos (esto es SQL). Con el siguiente procedimiento se obtendrá un modelo de datos en sentencias DDL, en un uno archivo con extensión .sql, estos documentos son los códigos fuente de las bases de datos, generalmente en el proceso de desarrollo de software son versionados como cualquier archivo de código fuente.
 
     h5.t1.mb-5(data-aos="fade-down") De acuerdo con lo anterior, una forma de generar la base de datos es la siguiente:         
 
@@ -502,12 +503,12 @@
                     span 7
                   span Finalmente, le da en #[i Next] y el sistema generará el DDL de la base datos.
 
-    p(data-aos="fade-down") Se guarda un archivo #[b.t1 “Save to file”] y se copia al portapapeles #[b.t1 “Copy to clipboard”]. Se sugiere antes de dar #[i Next] y continuar el proceso, primero guardar como un archivo y ponerle este nombre, luego de ponerlo le da #[i Next] para que ejecute ese script en el SGDB instalado.  
+    p(data-aos="fade-down") Se guarda un archivo #[b.t1 “Save to file”] y se copia al portapapeles #[b.t1 “Copy to clipboard”]. Se sugiere antes de dar #[i Next] y continuar el proceso, primero guardar como un archivo y ponerle este nombre, luego de ponerlo le da #[i Next] para que ejecute ese #[i script] en el SGDB instalado.  
 
     .row.justify-content-center.align-items-center          
       .col-lg-9.my-3
         .bg17.brad.p-4
-          p(data-aos="fade-down").mb-0.text-white El archivo generado guardado en formato de texto con extensión .sql es lo que se llama el script DDL de la base de datos, es el principal producto de un modelo de datos, es el entregable de un proyecto y por lo que materialmente se puede pasar una factura al cliente. 
+          p(data-aos="fade-down").mb-0.text-white El archivo generado guardado en formato de texto con extensión .sql es lo que se llama el #[i script] DDL de la base de datos, es el principal producto de un modelo de datos, es el entregable de un proyecto y por lo que materialmente se puede pasar una factura al cliente. 
         
       .col-lg-3.my-3
         img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/64.png', alt='') 
@@ -529,14 +530,14 @@
     p(data-aos="fade-down") Además, junto a su equipo de trabajo ha detectado que no modelaron el pie de la factura:    
 
     .titulo-sexto.color-acento-contenido
-      h5 Figura 12.
+      h5 Figura 11.
       span Pie de la factura
     .bgfig.p-5.brad.mb-5(data-aos="zoom-in") 
       img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/66.png', alt='Imagen que presenta el pie de la factura que se viene trabajando.') 
     p(data-aos="fade-down") Este ajuste consiste en agregar en la tabla factura, el valor del subtotal y la tasa de impuesto a aplicar; con estos datos se puede calcular el total:   
 
     .titulo-sexto.color-acento-contenido
-      h5 Figura 14.
+      h5 Figura 12.
       span Información a agregar en la tabla factura
     .bgfig.p-5.brad.mb-5(data-aos="zoom-in") 
       img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/67.png', alt='Imagen que presenta el pie de la factura que se viene trabajando.') 
@@ -553,7 +554,7 @@
             | Luego, seleccione la conexión local.
           li 
             i.fas.fa-code.color1
-            | Luego, seleccione los datos en la parte de generación de script adicionales.
+            span Luego, seleccione los datos en la parte de generación de #[i script] adicionales.
           li 
             i.fas.fa-code.color1
             | Después de pedir la contraseña se conecta; analice las bases de datos presentes y características del servidor.
@@ -583,7 +584,7 @@
       .col-lg-3.my-3
         img.img-t.img-a(data-aos="zoom-in")(src='@/assets/curso/temas/70.png', alt='')            
       .col-lg-9.my-3
-        p(data-aos="fade-down") Muchas veces no es el computador local el que interesa actualizar, sino más bien, un servidor en la nube. Algunas plataformas tienen un entorno gráfico que permite aplicar el script con unos cuantos clics desde una interfaz web, pero la mayoría ofrece una interfaz de consola o terminal, de manera que los recursos computacionales no se desperdician en interfaces gráficas.  
+        p(data-aos="fade-down") Muchas veces no es el computador local el que interesa actualizar, sino más bien, un servidor en la nube. Algunas plataformas tienen un entorno gráfico que permite aplicar el #[i script] con unos cuantos clics desde una interfaz web, pero la mayoría ofrece una interfaz de consola o terminal, de manera que los recursos computacionales no se desperdician en interfaces gráficas.  
 
         h5.t1(data-aos="fade-down") Verifique los siguientes archivos:
         .row.justify-content-center.mb-5 
@@ -610,7 +611,7 @@
       .col-lg-12.col-12.px-lg-5.px-4 
         .row.justify-content-center.align-items-center          
           .col-lg-12  
-            p(data-aos="fade-down").mb-5 #[b.t1 A continuación, se muestra cómo aplicar el script desde una terminal.] Esta base de datos se encuentra diseñada para cumplir el requerimiento funcional de administración de facturas de una droguería:
+            p(data-aos="fade-down").mb-5 #[b.t1 A continuación, se muestra cómo aplicar el #[i script] desde una terminal.] Esta base de datos se encuentra diseñada para cumplir el requerimiento funcional de administración de facturas de una droguería:
 
             .tarjeta.tarjeta--gris.p-4.mb-5(data-aos="fade-left")
               SlyderA(tipo="b")
@@ -626,7 +627,7 @@
                   .col-lg-5.my-3.col-md-auto
                     h5 #[mark.bgtg.brad2.px-2 Paso 2]
                     .t5.pe-5
-                      p A continuación, pedirá la contraseña de root.   
+                      p A continuación, pedirá la contraseña de #[i root].   
                   .col-lg-5.my-3.mb-4.mb-md-0
                     img.img-a.img-t(src='@/assets/curso/temas/73.png', alt="")  
 
@@ -791,7 +792,7 @@
         img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/80.png', alt='')     
 
     .titulo-sexto.color-acento-contenido
-      h5 Figura 15.
+      h5 Figura 13.
       span Diagrama entidad relación
     .bgfig.p-5.brad.mb-5(data-aos="zoom-in") 
       img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/81.svg', alt='La imagen presenta el diagrama entidad relación del caso que se está estudiando.') 
@@ -806,17 +807,13 @@
           .list__txt.bgicon.p-0.px-4
             h3.mb-0 Diseño lógico
 
-    p(data-aos="fade-down") Una vez se tiene el modelo conceptual, se mapea el diagrama entidad relación o también llamado modelo conceptual a un modelo lógico, esto mediante las reglas de multiplicidad entre entidades (de uno a uno, de uno a muchos y de muchos a muchos).   
-
     .row.bg25.align-items-center.mb-5(data-aos="fade-left")
       .col-lg-12.col-12.px-lg-5.px-4 
         .row.justify-content-center.align-items-center          
-          .col-lg-12 
-            .titulo-sexto.color-acento-contenido
-              h5 Figura 16.
-              span Mapear diagrama entidad relación a un modelo relacional
-            .bgfig.p-5.brad.mb-5(data-aos="zoom-in") 
-              img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/83.png', alt='Imagen que presenta cómo mapear el diagrama entidad relación a un modelo relacional.') 
+          .col-lg-12
+            p(data-aos="fade-down") Una vez se tiene el modelo conceptual, se mapea el diagrama entidad relación o también llamado modelo conceptual a un modelo lógico, esto mediante las reglas de multiplicidad entre entidades (de uno a uno, de uno a muchos y de muchos a muchos).   
+
+ 
             p(data-aos="fade-down").mb-5 Puede verificar algunos modelos, pero es recomendable que lo cree de manera que ejercite lo hasta ahora visto.    
 
             .row.justify-content-center.align-items-center          

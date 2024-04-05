@@ -108,17 +108,13 @@
 
     .row.justify-content-center.align-items-center.mb-4           
       .col-lg-7.my-3
-        .bg9.p-4.brad.mb-3   
+        .bg9.p-4.brad.mb-5   
           p(data-aos="fade-down").mb-0 El proceso complementario de restablecer una copia de base de datos es fundamental para la instalación de un sistema o el restablecimiento de la operación, cuando el sistema falla o se quiere volver a una versión anterior de la base de datos. Es por esto que se presentará un método sencillo para restablecer la base de datos a partir de un backup en formato SQL.     
-        h5.t1(data-aos="fade-down") Siga los siguientes pasos luego de conectar a la base de datos con MySQL #[i Workbench] como se muestra en la imagen:                  
-      .col-lg-5.my-3
-        img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/17.png', alt='')  
+        h5.t1(data-aos="fade-down") Siga los siguientes pasos luego de conectar a la base de datos con MySQL #[i Workbench] como se muestra a continuación.                
+      .col-lg-5
+        img.img-a.img-t.mov(data-aos="zoom-in")(src='@/assets/curso/temas/17.png', alt='')  
 
-    .titulo-sexto.color-acento-contenido
-      h5 Figura 16.
-      span Pasos 
-    .bgfig.p-5.brad.mb-5(data-aos="zoom-in") 
-      img.img-a.img-t.mb-5(data-aos="zoom-in")(src='@/assets/curso/temas/18.png', alt='Imagen que presenta los pasos luego de conectar a la base de datos con MySQL Workbench.') 
+
     .row.justify-content-center.align-items-top          
       .col-lg.my-1.col-md-12
         .bg17.p-3.brad.h-100       

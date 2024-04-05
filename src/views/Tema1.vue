@@ -16,7 +16,7 @@
                 .col-lg-3.my-3
                   img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/19.png', alt='')
                 .col-lg-7.my-3
-                  p(data-aos="fade-down").mb-0 #[b.mark.t3 Es importante saber cómo obtener, instalar, configurar y probar las herramientas necesarias para realizar las operaciones de diseño.] existen muchas tecnologías para diseñar e implementar bases de datos, en este caso, utilizaremos MySQL como sistema gestor de bases de datos y MySQL Workbench como herramienta de diseño, es importante que en la medida que se van presentando los contenidos, realice de forma local y en su computador el trabajo con los ejercicios y ejemplos propuestos.
+                  p(data-aos="fade-down").mb-0 #[b.mark.t3 Es importante saber cómo obtener, instalar, configurar y probar las herramientas necesarias para realizar las operaciones de diseño.] Existen muchas tecnologías para diseñar e implementar bases de datos, en este caso, utilizaremos MySQL como sistema gestor de bases de datos y MySQL Workbench como herramienta de diseño, es importante que en la medida que se van presentando los contenidos, realice de forma local y en su computador el trabajo con los ejercicios y ejemplos propuestos.
 
     Separador 
     #t_1_1.titulo-segundo.color-acento-contenido(data-aos="zoom-in-left")
@@ -73,7 +73,7 @@
 
                 h5.text-white(data-aos="fade-down") Algunas de las características más importantes de Workbench son las siguientes:                  
               .col-lg-4.my-3
-                img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/9.png', alt='')
+                img.img-a.img-t.mov(data-aos="zoom-in")(src='@/assets/curso/temas/9.png', alt='')
 
             .row.justify-content-center.mb-4
               .col-lg-3.my-3.mov
