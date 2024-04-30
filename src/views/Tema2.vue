@@ -97,9 +97,9 @@
               .col-lg-8.my-3
                 p(data-aos="fade-down") Una buena forma de empezar el análisis es con el formato de la factura; se inicia revisando la cabecera de la factura. 
 
-                h5.t1(data-aos="fade-down").mb-4 Un primer impulso puede hacer pensar que se debe crear una entidad para la compañía o empresa y pensar en definir una entidad o empresa con atributos “nombre_compañia”, “direccion”, “ciudad”, etc.; sin embargo, considere lo siguiente:
+                h5.t1(data-aos="fade-down").mb-4 Un primer impulso puede hacer pensar que se debe crear una entidad para la compañía o empresa y pensar en definir una entidad o empresa con atributos “nombre_compañia”, “dirección”, “ciudad”, etc.; sin embargo, considere lo siguiente:
                 .bg9.p-4.brad(data-aos="fade-left")
-                  p(data-aos="fade-down").mb-0 El cliente le ha pedido que modele un sistema de facturación para su droguería, es decir, para una droguería, no para un conjunto de droguerías.  Es diferente si solicitaran “se necesita un sistema de facturación que administre el inventario y facturación de múltiples droguerías”, a estos problemas se les llama multitenant (multiinquilino), pero este no es el caso. Por lo tanto, no es la entidad droguería parte del modelo, porque no se está modelando la facturación de múltiples droguerías.                    
+                  p(data-aos="fade-down").mb-0 El cliente le ha pedido que modele un sistema de facturación para su droguería, es decir, para una droguería, no para un conjunto de droguerías. Es diferente, si solicitaran “se necesita un sistema de facturación que administre el inventario y facturación de múltiples droguerías”, a estos problemas se les llama multitenant (multiinquilino), pero este no es el caso. Por lo tanto, no es la entidad droguería parte del modelo, porque no se está modelando la facturación de múltiples droguerías.                    
               .col-lg-4.my-3
                 img.img-t.img-a.mov(data-aos="zoom-in")(src='@/assets/curso/temas/24.png', alt='')                             
  
@@ -120,7 +120,7 @@
               img.img-a.img-t(src='@/assets/curso/temas/26.png', alt='')       
             .col.my-3
               p(data-aos="fade-down").mb-0 Lo anterior se puede modelar con una entidad, la entidad persona que relaciona los datos (nombre, compañía, dirección, ciudad, teléfono, correo electrónico).   
-        p(data-aos="fade-down") Una forma simplificada sería creando una entidad persona y para poder identificar cada fila usar una llave primara (id_persona), pero también es importante usar un identificador único de persona como lo es el documento de identificación (porque las personas nunca tienen el mismo número), de igual forma, debe tener en cuenta que no puede existir una persona si al menos no se define el número de identificación y el nombre. 
+        p(data-aos="fade-down") Una forma simplificada sería creando una entidad persona y para poder identificar cada fila usar una llave primaria (id_persona), pero también es importante usar un identificador único de persona como lo es el documento de identificación (porque las personas nunca tienen el mismo número), de igual forma, debe tener en cuenta que no puede existir una persona si al menos no se define el número de identificación y el nombre. 
         h5.t1(data-aos="fade-down") Lo anterior se puede ver en la siguiente imagen (flecha roja para definir la llave primaria, morada para definir los datos que deben ser registrados obligatoriamente, y la verde una columna cuyo valor no puede repetirse en toda la tabla).
       .col-lg-4.my-3
         img.img-a.img-t(data-aos="zoom-in")(src='@/assets/curso/temas/27.png', alt='')          
@@ -437,7 +437,7 @@
     #t_2_3.titulo-segundo.color-acento-contenido(data-aos="zoom-in-left")
       h2 2.3 Generar la base de datos
 
-    p(data-aos="fade-down") A continuación, se presentará cómo obtener el modelo físico de una base de datos en formato natural de las bases de datos (esto es SQL). Con el siguiente procedimiento se obtendrá un modelo de datos en sentencias DDL, en un uno archivo con extensión .sql, estos documentos son los códigos fuente de las bases de datos, generalmente en el proceso de desarrollo de software son versionados como cualquier archivo de código fuente.
+    p(data-aos="fade-down") A continuación, se presentará cómo obtener el modelo físico de una base de datos en formato natural de las bases de datos (esto es SQL). Con el siguiente procedimiento se obtendrá un modelo de datos en sentencias DDL, en un archivo con extensión .sql, estos documentos son los códigos fuente de las bases de datos, generalmente en el proceso de desarrollo de software son versionados como cualquier archivo de código fuente.
 
     h5.t1.mb-5(data-aos="fade-down") De acuerdo con lo anterior, una forma de generar la base de datos es la siguiente:         
 
@@ -515,7 +515,7 @@
 
     Separador 
     #t_2_4.titulo-segundo.color-acento-contenido(data-aos="zoom-in-left")
-      h2 2.4.	Operaciones de mantenimiento y actualización 
+      h2 2.4	Operaciones de mantenimiento y actualización 
 
     .row.justify-content-center.mb-5  
       .col-lg-4.my-3
@@ -525,7 +525,7 @@
         img.img-t.img-a(data-aos="zoom-in")(src='@/assets/curso/temas/65.png', alt='')                             
       .col-lg-4.my-3
         .bg8.p-4.brad.h-100(data-aos="fade-left")
-          p(data-aos="fade-down").mb-0 Suponga que el cliente ha contratado un servidor en la nube para la base de datos y al darle subir el archivo de extensión .sql ha generado la base de datos, pero, se ha dado cuenta que su modelo está mal o incompleto y lleva varios meses trabajando la base de datos, hay muchos datos, por lo que no se puede volver a empezar con una base de datos vacía, sino que se debe ajustar la base de datos actual (base en producción) sin borrar o alterar los datos que la base ya tiene.
+          p(data-aos="fade-down").mb-0 Suponga que el cliente ha contratado un servidor en la nube para la base de datos y al darle subir el archivo de extensión .sql ha generado la base de datos, pero, se ha dado cuenta de que su modelo está mal o incompleto y lleva varios meses trabajando la base de datos, hay muchos datos, por lo que no se puede volver a empezar con una base de datos vacía, sino que se debe ajustar la base de datos actual (base en producción) sin borrar o alterar los datos que la base ya tiene.
 
     p(data-aos="fade-down") Además, junto a su equipo de trabajo ha detectado que no modelaron el pie de la factura:    
 
@@ -704,7 +704,7 @@
     .row.justify-content-center.align-items-center          
       .col-lg-7.my-3
         .bg9.brad.p-4.mb-3
-          p(data-aos="fade-down").mb-0 Se necesita un sistema que permita controlar la matrículas de un instituto de formación técnica profesional; donde interesa la información pertinente de los estudiantes como son los datos personales y la edad; y de los profesores parte de los datos personales como la titulación profesional o técnica y el año de graduación.  
+          p(data-aos="fade-down").mb-0 Se necesita un sistema que permita controlar las matrículas de un instituto de formación técnica profesional; donde interesa la información pertinente de los estudiantes como son los datos personales y la edad; y de los profesores parte de los datos personales como la titulación profesional o técnica y el año de graduación.  
         p(data-aos="fade-down") Cada programa técnico se desarrolla por semestres y un semestre tiene varias materias, cada semestre un estudiante puede matricular máximo 7 materias, un profesor puede orientar varias materias y la misma materia puede ser dictada por varios profesores. 
       .col-lg-5.my-3
         img.img-a.img-t(src='@/assets/curso/temas/78.png', alt='')  
@@ -814,7 +814,7 @@
             p(data-aos="fade-down") Una vez se tiene el modelo conceptual, se mapea el diagrama entidad relación o también llamado modelo conceptual a un modelo lógico, esto mediante las reglas de multiplicidad entre entidades (de uno a uno, de uno a muchos y de muchos a muchos).   
 
  
-            p(data-aos="fade-down").mb-5 Puede verificar algunos modelos, pero es recomendable que lo cree de manera que ejercite lo hasta ahora visto.    
+            p(data-aos="fade-down").mb-5 Puede verificar algunos modelos, pero es recomendable que lo cree de manera que ejercite, lo hasta ahora visto.    
 
             .row.justify-content-center.align-items-center          
               .col-lg-8
@@ -893,7 +893,7 @@
             ul.lista-ul.fa-ul.mb-0                   
               li 
                 i.fas.fa-code.color1
-                | Este es el punto estratégico del modelo, revisar la no nulidad o nulidad de las llaves foráneas es de vital importancia, porque ello determina en gran porcentaje si su modelo cumple los requerimientos funcionales del sistema, por ejemplo, una inscripción debe tener relacionado un id_estudiante y un id_programa, porque la lógica de una inscripción es que un estudiante se matricula a un programa de formación, por lo tanto ni id_estudiante, ni id_programa deben ser Null, por lo tanto son atributo con restricción Not Null (NN). 
+                | Este es el punto estratégico del modelo, revisar la no nulidad o nulidad de las llaves foráneas es de vital importancia, porque ello determina en gran porcentaje si su modelo cumple los requerimientos funcionales del sistema, por ejemplo, una inscripción debe tener relacionado un id_estudiante y un id_programa, porque la lógica de una inscripción es que un estudiante se matricula a un programa de formación, por lo tanto, ni id_estudiante, ni id_programa deben ser Null, por lo tanto, son atributo con restricción Not Null (NN). 
 
           div(titulo="Definición de índices")
             p Valide:

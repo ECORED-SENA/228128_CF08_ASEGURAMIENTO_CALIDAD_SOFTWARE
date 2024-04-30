@@ -88,11 +88,6 @@ export default {
             titulo: 'Actualización por interfaz de línea de comandos',
             hash: 't_2_5',
           },
-          {
-            numero: '2.6',
-            titulo: 'Análisis y diseño gestión de matrículas',
-            hash: 't_2_6',
-          },
         ],
       },
       {

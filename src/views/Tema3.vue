@@ -72,7 +72,7 @@
                   | Se le da doble clic a la conexión creada. 
                 li 
                   i.fas.fa-code.color1
-                  | Luego, se da clic en la pestaña administración y Data Export. 
+                  | Luego, se da clic en la pestaña, administración y Data Export. 
                 li 
                   i.fas.fa-code.color1
                   | Se debe seleccionar: 
@@ -160,7 +160,7 @@
                 span.text-bold 6. 
               span.text-white Haga clic en el botón Star Import. 
 
-    p.mt-5(data-aos="fade-down") Hasta este punto, puede tener la seguridad que está en capacidad de respaldar y restablecer la base de datos por lo menos en un entorno de desarrollo y producción para bases pequeñas. Este proceso le puede servir para bases de datos grandes en las que debe usar la interfaz de comando “línea” con el comando “source”.  Esto debido a que si la copia de seguridad es del tamaño de gigas, MySQL Workbench no podrá abrirlo y puede bloquearse, mientras que por la interfaz de línea de comando, el tamaño de la copia puede ser tan grande como se desee.                                          
+    p.mt-5(data-aos="fade-down") Hasta este punto, puede tener la seguridad que está en capacidad de respaldar y restablecer la base de datos, por lo menos en un entorno de desarrollo y producción para bases pequeñas. Este proceso le puede servir para bases de datos grandes en las que debe usar la interfaz de comando “línea” con el comando “source”.  Esto debido a que si la copia de seguridad es del tamaño de gigas, MySQL Workbench no podrá abrirlo y puede bloquearse, mientras que por la interfaz de línea de comando, el tamaño de la copia puede ser tan grande como se desee.                                          
 </template>
 
 <script>
